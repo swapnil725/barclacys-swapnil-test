@@ -6,7 +6,7 @@ namespace DAL.ServiceInterfaces
 {
    public interface IFileDetailsService
     {
-        string GetFileDetailVersion(string filePath);
+        string GetFileVersion(string filePath);
         int GetFileSize(string filePath);
     }
 }

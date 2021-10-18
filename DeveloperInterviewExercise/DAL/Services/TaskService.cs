@@ -20,7 +20,7 @@ namespace DAL.Services
                 {
                     if (args[0] == "-v")
                     {
-                        Console.WriteLine("File Version: " + fileDetailsService.GetFileDetailVersion(args[1]));
+                        Console.WriteLine("File Version: " + fileDetailsService.GetFileVersion(args[1]));
                     }
                     else
                     {
@@ -47,7 +47,7 @@ namespace DAL.Services
                     switch(args[0])
                     {
                         case "-v": case "--v": case "/v": case "--version":
-                         Console.WriteLine("File Version: " + fileDetailsService.GetFileDetailVersion(args[1]));
+                         Console.WriteLine("File Version: " + fileDetailsService.GetFileVersion(args[1]));
                             break;
                         case "-s": case "--s": case "/s": case "--size":
                             Console.WriteLine("File Size: " + fileDetailsService.GetFileSize(args[1]));

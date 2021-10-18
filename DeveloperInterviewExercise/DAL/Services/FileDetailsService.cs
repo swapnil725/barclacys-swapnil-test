@@ -13,13 +13,21 @@ namespace DAL.Services
         {
             fileDetails = new FileDetails();
         }
-        public string GetFileDetailVersion(string filePath)
+        public string GetFileVersion(string filePath)
         {
+            if(string.IsNullOrEmpty(filePath))
+            {
+                return null;
+            }
             return fileDetails.Version(filePath);
         }
 
         public int GetFileSize(string filePath)
         {
+            if (string.IsNullOrEmpty(filePath))
+            {
+                return 0;
+            }
             return fileDetails.Size(filePath);
         }
     }
